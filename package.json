@@ -1,6 +1,6 @@
 {
   "name": "theword",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "from event selected a word and return the word and position",
   "main": "dist/index.js",
   "scripts": {
