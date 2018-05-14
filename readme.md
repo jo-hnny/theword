@@ -2,6 +2,10 @@
 
 `npm i theword --save`
 
+`theword(event, [regexp])`
+
+regexp: test word ,default `/[a-zA-Z'’]/`
+
 ```js
   import theword from 'theword'
   pageElement.onclick= e => {

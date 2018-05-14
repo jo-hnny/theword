@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .word {
+      position: fixed;
+      background-color: #50b354;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <p>hello welcome to theword</p>
+  <div class="word"></div>
+  <script type="module">
+    import theword from '../src/index.js'
+
+    const wordEle = document.querySelector('.word')
+    const pEle = document.querySelector('p')
+    pEle.onclick = e => {
+      const rsp = theword(e)
+      if (!rsp) return
+      const { word, rect } = rsp
+      wordEle.innerText = word
+      wordEle.style.left = rect.left + 'px'
+      wordEle.style.top = rect.top + 'px'
+    }
+  </script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
-export default event => {
-  const isWord = str => str && /[a-zA-Z'’]/.test(str)
+export default (event, regexp = /[a-zA-Z'’]/) => {
+  const isWord = str => str && regexp.test(str)
 
   const { clientX, clientY } = event
 
@@ -8,7 +8,7 @@ export default event => {
   const data = range.startContainer.data
   const point = range.startOffset
 
-  if (!isWord(data[point])) return {}
+  if (!isWord(data[point])) return
 
   let j = point - 1
   let k = point + 1
