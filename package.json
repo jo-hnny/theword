@@ -1,0 +1,35 @@
+{
+  "name": "theword",
+  "version": "1.0.0",
+  "description": "from event selected a word and return the word and position",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnny19941216/theword.git"
+  },
+  "keywords": [
+    "js",
+    "word",
+    "range",
+    "selection",
+    "event",
+    "english"
+  ],
+  "author": "johnny19941216",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnny19941216/theword/issues"
+  },
+  "homepage": "https://github.com/johnny19941216/theword#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}
