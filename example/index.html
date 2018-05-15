@@ -18,9 +18,8 @@
 <body>
   <p>hello welcome to theword</p>
   <div class="word"></div>
-  <script type="module">
-    import theword from '../src/index.js'
-
+  <script src="../dist/index.js"></script>
+  <script>
     const wordEle = document.querySelector('.word')
     const pEle = document.querySelector('p')
     pEle.onclick = e => {
