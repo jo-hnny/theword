@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .word {
+        position: fixed;
+        background-color: #50b354;
+        color: #fff;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-    .word {
-      position: fixed;
-      background-color: #50b354;
-      color: #fff;
-    }
-  </style>
-</head>
+  <body>
+    <div class="texts">
+      <p>
+        It is becoming the party of mishaps, if not of mean-spiritedness. Ahead of
+        an election on May 18th the ruling, right-of-centre Liberal Party has been
+        obliged to disavow two of its parliamentary candidates for Islamophobia.
+        Another stepped down after it emerged that he had called on the party to
+        expel gay members. A fourth candidate was censured, but not dumped, for
+        suggesting that women lack the “business skills” to earn as much as men.
+        
+      </p>
+  
+      <p>Australia’s main opposition party, Labor, faces similar scandals: it
+        ditched two of its would-be mps this month for sexist and anti-Semitic
+        slurs. But it does not already have a reputation for prejudice and
+        division. Last year the Liberals’ parliamentary caucus toppled its
+        moderate leader, Malcolm Turnbull, in a right-wing coup. Female Liberal
+        mps have since made headlines by accusing their male colleagues of
+        intimidation and misogyny. The new leadership has tried to revive the
+        party’s prospects by fanning paranoia about the trickle of illegal
+        immigrants who attempt to reach Australia’s northern shores by boat from
+        Indonesia and by promising to cut legal immigration, too. It also insists
+        that Labor’s plans to reduce emissions of greenhouse gases will wreck the
+        economy.</p>
+    </div>
 
-<body>
-  <p>hello welcome to theword</p>
-  <div class="word"></div>
-  <script src="../dist/index.js"></script>
-  <script>
-    const wordEle = document.querySelector('.word')
-    const pEle = document.querySelector('p')
-    pEle.onclick = e => {
-      const rsp = theword(e)
-      if (!rsp) return
-      const { word, rect } = rsp
-      wordEle.innerText = word
-      wordEle.style.left = rect.left + 'px'
-      wordEle.style.top = rect.top + 'px'
-    }
-  </script>
-</body>
+    <div class="word"></div>
 
+    <script src="../dist/index.js"></script>
+    <script>
+      const wordEle = document.querySelector(".word");
+      const pEle = document.querySelector(".texts");
+      pEle.onclick = e => {
+        const rsp = theword(e);
+        if (!rsp) return;
+        const { word, rect } = rsp;
+        wordEle.innerText = word;
+        wordEle.style.left = rect.left + "px";
+        wordEle.style.top = rect.top + "px";
+      };
+    </script>
+  </body>
 </html>
